@@ -262,4 +262,12 @@ describe('lib/random_token', () => {
       })
     })
   })
+  describe('.genf', () => {
+    test('should apply the friendly option by default', () => {
+      const token = RandomToken.genf({})
+      RandomToken.FRIENDLY_MASK.split('').forEach((singleMask) => {
+        expect(token.split('')).not.toContain(singleMask)
+      })
+    })
+  })
 })
