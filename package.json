@@ -1,0 +1,44 @@
+{
+  "name": "random_token",
+  "version": "1.0.0",
+  "description": "A simple way to generate a random token.",
+  "main": "lib/index.js",
+  "module": "src/index.js",
+  "scripts": {
+    "build": "babel --plugins transform-es2015-modules-commonjs src --out-dir lib",
+    "test": "jest src",
+    "test:watch": "jest src --watch --notify",
+    "lint": "eslint src",
+    "coverage": "jest src --coverage"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sibevin/random-token.js.git"
+  },
+  "keywords": [
+    "random",
+    "random-token",
+    "token",
+    "uid"
+  ],
+  "author": "Sibevin Wang",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sibevin/random-token.js/issues"
+  },
+  "homepage": "https://github.com/sibevin/random-token.js#readme",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-eslint": "^10.0.1",
+    "babel-plugin-transform-es2015-modules-commonjs": "^6.26.2",
+    "eslint": "^5.16.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-import": "^2.17.2",
+    "eslint-plugin-jest": "^22.5.1",
+    "jest": "^24.8.0"
+  },
+  "dependencies": {},
+  "jest": {
+    "testRegex": "(/tests/.*|(\\.|/)(test|spec))\\.[jt]sx?$"
+  }
+}
