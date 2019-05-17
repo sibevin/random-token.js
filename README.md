@@ -1,5 +1,8 @@
 # Random Token
 
+[![npm version](https://badge.fury.io/js/%40sibevin%2Frandom-token.svg)](https://badge.fury.io/js/%40sibevin%2Frandom-token)
+[![Build Status](https://travis-ci.org/sibevin/random-token.js.svg?branch=master)](https://travis-ci.org/sibevin/random-token.js)
+
 A simple way to generate a random token.
 
 ## Usage
