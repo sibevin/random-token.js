@@ -6,12 +6,12 @@
   "module": "src/index.js",
   "scripts": {
     "clean": "rimraf lib",
-    "build": "babel --plugins transform-es2015-modules-commonjs src --out-dir lib",
     "test": "jest src",
     "test:watch": "jest src --watch --notify",
     "lint": "eslint src tests",
     "coverage": "jest src --coverage",
-    "prepublish": "npm run clean && npm run lint && npm run test && npm run build"
+    "prepublish": "npm run clean && npm run lint && npm run test && npm run build",
+    "build": "cross-env BABEL_ENV=production babel src --out-dir lib"
   },
   "repository": {
     "type": "git",
@@ -32,7 +32,11 @@
   "devDependencies": {
     "babel-cli": "^6.26.0",
     "babel-eslint": "^10.0.1",
+    "babel-plugin-add-module-exports": "^1.0.2",
     "babel-plugin-transform-es2015-modules-commonjs": "^6.26.2",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-minify": "^0.5.0",
+    "cross-env": "^5.2.0",
     "eslint": "^5.16.0",
     "eslint-config-airbnb-base": "^13.1.0",
     "eslint-plugin-import": "^2.17.2",
