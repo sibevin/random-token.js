@@ -9,8 +9,9 @@
     "build": "babel --plugins transform-es2015-modules-commonjs src --out-dir lib",
     "test": "jest src",
     "test:watch": "jest src --watch --notify",
-    "lint": "eslint src",
-    "coverage": "jest src --coverage"
+    "lint": "eslint src tests",
+    "coverage": "jest src --coverage",
+    "prepublish": "npm run clean && npm run lint && npm run test && npm run build"
   },
   "repository": {
     "type": "git",
