@@ -1,5 +1,5 @@
 {
-  "name": "random_token",
+  "name": "@sibevin/random-token",
   "version": "1.0.0",
   "description": "A simple way to generate a random token.",
   "main": "lib/index.js",
