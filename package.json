@@ -1,6 +1,6 @@
 {
   "name": "@sibevin/random-token",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "description": "A simple way to generate a random token.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -11,6 +11,9 @@
     "coverage": "vitest run --coverage",
     "doc": "typedoc --entryPoints ./src/index.ts"
   },
+  "files": [
+    "dist/*"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/sibevin/random-token.js.git"
