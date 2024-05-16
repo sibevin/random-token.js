@@ -2,7 +2,7 @@
 name: Check
 on:
   pull_request:
-    branches: [dev]
+    branches: [dev, prod]
 jobs:
   check:
     runs-on: ubuntu-latest
