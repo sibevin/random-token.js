@@ -8,7 +8,8 @@
     "test": "vitest",
     "lint": "eslint .",
     "build": "tsc && tsc -d",
-    "coverage": "vitest run --coverage"
+    "coverage": "vitest run --coverage",
+    "doc": "typedoc --entryPoints ./src/index.ts"
   },
   "repository": {
     "type": "git",
@@ -30,6 +31,7 @@
     "@eslint/js": "^9.2.0",
     "@vitest/coverage-istanbul": "^1.6.0",
     "eslint": "^8.57.0",
+    "typedoc": "^0.25.13",
     "typescript": "^5.4.5",
     "typescript-eslint": "^7.9.0",
     "vitest": "^1.6.0"
