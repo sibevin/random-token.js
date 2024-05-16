@@ -1,0 +1,20 @@
+---
+name: Doc
+on:
+  push:
+    branches: [dev]
+jobs:
+  generate-doc:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v3
+        with:
+          node-version: '20'
+      - run: npm i
+      - run: npm run doc
+      - uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          branch: gh-pages
+          folder: docs
+          token: ${{ secrets.GITHUB_TOKEN }}
