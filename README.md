@@ -1,20 +1,15 @@
 # Random Token
 
-[![npm version](https://badge.fury.io/js/%40sibevin%2Frandom-token.svg)](https://badge.fury.io/js/%40sibevin%2Frandom-token)
-[![Build Status](https://travis-ci.org/sibevin/random-token.js.svg?branch=master)](https://travis-ci.org/sibevin/random-token.js)
-[![Coverage Status](https://coveralls.io/repos/github/sibevin/random-token.js/badge.svg)](https://coveralls.io/github/sibevin/random-token.js)
+[![npm version](https://img.shields.io/npm/v/%40sibevin%2Frandom-token)
+[![Doc]](https://img.shields.io/badge/document-blue?link=https%3A%2F%2Fsibevin.github.io%2Frandom-token.js%2F)
 
 A simple way to generate a random token.
 
 ## Usage
 
-Require or import package first
+Import package first
 
-    // cjs
-    const { RandomToken } = require('@sibevin/random-token')
-
-    // esm
-    import { RandomToken } from '@sibevin/random-token'
+    import * as RandomToken from '@sibevin/random-token'
 
 Use `gen` to create a random token with a given length.
 
@@ -100,7 +95,7 @@ Use `mask` option to filter characters which you don't want to appear on the gen
 
 ### Friendly
 
-Use `friendly` option to remove the ambiguous characters, the default mask includes *1, I, l, i, 0, O, o, Q, D, C, c, G, 9, 6, U, u, V, v, E, F, M, N, 8, B*.
+Use `friendly` option to remove the ambiguous characters, the default mask includes _1, I, l, i, 0, O, o, Q, D, C, c, G, 9, 6, U, u, V, v, E, F, M, N, 8, B_.
 
     RandomToken.gen({ length: 32, friendly: true })
     // hTTSgXdHzy5wkymnd3qjR44LXLp43qrY
@@ -112,12 +107,12 @@ The default `friendly` option is false. There is a convenient method `genf` usin
 
 Note that the friendly option is supported with alphabet or random-generated seeds (no 'seed' is given) only.
 
-    RandomToken.genf({ length: 32, seed: 'b' })
+    RandomToken.genf({ length: 32, seed: 'abc' })
     // Error: Invalid Parameters: friendly. The friendly mask is supported with alphabet or random-generated seeds (no "seed" is given) only.
 
 ## Test
 
-    npm test
+    npm run test
 
 ## Authors
 
@@ -125,4 +120,4 @@ Sibevin Wang
 
 ## Copyright
 
-Copyright (c) 2019 Sibevin Wang. Released under the MIT license.
+Copyright (c) 2019-2024 Sibevin Wang. Released under the MIT license.
