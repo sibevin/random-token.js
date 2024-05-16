@@ -7,7 +7,8 @@
   "scripts": {
     "test": "vitest",
     "lint": "eslint .",
-    "build": "tsc && tsc -d"
+    "build": "tsc && tsc -d",
+    "coverage": "vitest run --coverage"
   },
   "repository": {
     "type": "git",
@@ -27,6 +28,7 @@
   "homepage": "https://github.com/sibevin/random-token.js#readme",
   "devDependencies": {
     "@eslint/js": "^9.2.0",
+    "@vitest/coverage-istanbul": "^1.6.0",
     "eslint": "^8.57.0",
     "typescript": "^5.4.5",
     "typescript-eslint": "^7.9.0",
