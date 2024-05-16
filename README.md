@@ -1,7 +1,7 @@
 # Random Token
 
-[![npm version]](https://img.shields.io/npm/v/%40sibevin%2Frandom-token)
-[![Doc]](https://img.shields.io/badge/document-blue?link=https%3A%2F%2Fsibevin.github.io%2Frandom-token.js%2F)
+![npm version](https://img.shields.io/npm/v/%40sibevin%2Frandom-token)
+![doccument](https://img.shields.io/badge/document-blue?link=https%3A%2F%2Fsibevin.github.io%2Frandom-token.js%2F)
 
 A simple way to generate a random token.
 
