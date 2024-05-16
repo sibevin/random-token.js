@@ -11,6 +11,9 @@
     "coverage": "vitest run --coverage",
     "doc": "typedoc --entryPoints ./src/index.ts"
   },
+  "files": [
+    "dist/*"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/sibevin/random-token.js.git"
