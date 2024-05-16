@@ -1,22 +1,13 @@
 {
   "name": "@sibevin/random-token",
-  "version": "1.0.2",
+  "version": "2.0.0",
   "description": "A simple way to generate a random token.",
-  "main": "lib/index.js",
-  "module": "src/index.js",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "scripts": {
-    "clean": "rimraf lib",
-    "test": "jest src",
-    "test:watch": "jest src --watch --notify",
-    "lint": "eslint src tests",
-    "coverage": "jest src --coverage",
-    "prepublish": "npm run clean && npm run lint && npm run test && npm run build",
-    "build": "cross-env BABEL_ENV=production babel src --out-dir lib"
+    "test": "vitest",
+    "build": "tsc && tsc -d"
   },
-  "files": [
-    "lib",
-    "src"
-  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/sibevin/random-token.js.git"
@@ -34,23 +25,7 @@
   },
   "homepage": "https://github.com/sibevin/random-token.js#readme",
   "devDependencies": {
-    "babel-cli": "^6.26.0",
-    "babel-eslint": "^10.0.1",
-    "babel-plugin-add-module-exports": "^1.0.2",
-    "babel-plugin-transform-es2015-modules-commonjs": "^6.26.2",
-    "babel-preset-env": "^1.7.0",
-    "babel-preset-minify": "^0.5.0",
-    "coveralls": "^3.0.3",
-    "cross-env": "^5.2.0",
-    "eslint": "^5.16.0",
-    "eslint-config-airbnb-base": "^13.1.0",
-    "eslint-plugin-import": "^2.17.2",
-    "eslint-plugin-jest": "^22.5.1",
-    "jest": "^24.8.0",
-    "rimraf": "^2.6.3"
-  },
-  "dependencies": {},
-  "jest": {
-    "testRegex": "(/tests/.*|(\\.|/)(test|spec))\\.[jt]sx?$"
+    "typescript": "^5.4.5",
+    "vitest": "^1.6.0"
   }
 }
