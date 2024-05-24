@@ -1,0 +1,48 @@
+---
+name: Generate Doc and Coverage
+on:
+  push:
+    branches: [prod]
+  release:
+    types: [created]
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 20
+      - run: npm i
+      - run: npm run lint
+      - run: npm run test
+      - run: npm run build
+  generate-doc:
+    needs: check
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 20
+      - run: npm i
+      - run: npm run doc
+      - uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          branch: gh-pages
+          folder: docs
+          token: ${{ secrets.GITHUB_TOKEN }}
+  generate-coverage:
+    needs: check
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 20
+      - run: npm i
+      - run: npm run coverage
+      - uses: coverallsapp/github-action@v2
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          file: ./coverage/lcov.info
