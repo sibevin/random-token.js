@@ -1,6 +1,6 @@
 {
   "name": "@sibevin/random-token",
-  "version": "2.0.2",
+  "version": "2.0.3",
   "description": "A simple way to generate a random token.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -24,7 +24,7 @@
     "token",
     "uid"
   ],
-  "author": "Sibevin Wang",
+  "author": "Kait Wang",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/sibevin/random-token.js/issues"
