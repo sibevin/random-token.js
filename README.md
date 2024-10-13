@@ -7,7 +7,7 @@
 
 A simple way to generate a random token.
 
-## Usage
+# Usage
 
 Import package first
 
@@ -28,9 +28,9 @@ Or just simplify as:
     RandomToken.gen({ length: 32, seed: 'a', casing: 'u', mask: 'ABC', friendly: true })
     // DNJERZGWGJQTFYGYWGHAZEBGBRQFPHPF
 
-## Options
+# Options
 
-### Seed
+## Seed
 
 Use `seed` option to customize the random characters. Here are available options:
 
@@ -64,7 +64,7 @@ Use a string to customize random seeds.
     RandomToken.gen({ length: 32, seed: 'abc' })
     // bcabcbbcaaabcccabaabcacbcbbabbac
 
-### Casing
+## Casing
 
 Use `casing` option to modify the token case. Here are available options:
 
@@ -88,14 +88,14 @@ Casing is not supported with following `seed` options: `'number'`, `'binary'`, `
     RandomToken.genf({ length: 32, seed: 'number', casing: 'l' })
     // Error: Invalid Parameters: casing. The casing is not supported with number seeds
 
-### Mask
+## Mask
 
 Use `mask` option to filter characters which you don't want to appear on the generated token.
 
     RandomToken.gen({ length: 32, mask: '123abcABC' })
     // vhZp88dKzRZGxfQHqfx7DOL8jKTkWUuO
 
-### Friendly
+## Friendly
 
 Use `friendly` option to remove the ambiguous characters, the default mask includes _1, I, l, i, 0, O, o, Q, D, C, c, G, 9, 6, U, u, V, v, E, F, M, N, 8, B_.
 
@@ -112,14 +112,20 @@ Note that the friendly option is supported with alphabet or random-generated see
     RandomToken.genf({ length: 32, seed: 'abc' })
     // Error: Invalid Parameters: friendly. The friendly mask is supported with alphabet or random-generated seeds (no "seed" is given) only.
 
-## Test
+# Test
 
     npm run test
 
-## Authors
+# Support
 
-Sibevin Wang
+Support the continuous development of the project with concrete actions. Any form of help means a lot to us.
 
-## Copyright
+[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/kaitwang)
 
-Copyright (c) 2019-2024 Sibevin Wang. Released under the MIT license.
+# Authors
+
+Kait Wang
+
+# Copyright
+
+Copyright (c) 2019-2024 Kait Wang. Released under the MIT license.
